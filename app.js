@@ -19,7 +19,7 @@ app.post("/home", function(req, res){
     const username = req.body.Username;
     const password = req.body.password;
 
-    console.log("s")
+    //under construction
 
 });
 
