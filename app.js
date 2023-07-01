@@ -6,22 +6,24 @@ const ejs = require("ejs");
 
 const app = express();
 app.set("view engine", "ejs");
-
+app.use(express.static(__dirname + '/views'));
 
 app.get("/", function(req, res){
-    res.render("login.ejs");
-});
-app.get("/home", function(req, res){
     res.render("home.ejs");
 });
 
-app.post("/home", function(req, res){
-    const username = req.body.Username;
-    const password = req.body.password;
-
-    console.log("s")
-
+app.get("/create", function(req, res){
+    res.render("create.ejs");
 });
+
+
+
+app.get("/login", function(req, res){
+    res.render("login.ejs");
+});
+
+
+
 
 
 
