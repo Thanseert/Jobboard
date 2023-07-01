@@ -1,0 +1,62 @@
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #000000; /* Black line at the bottom */
+    padding: 10px;
+  }
+
+  /* Navbar container */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555555;
+  }
+
+  /* Job board app name */
+  .app-name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /* Navbar links */
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    margin-left: 10px;
+    color: #555555;
+    text-decoration: none;
+  }
+
+  /* Search section */
+  .search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+
+  .search-box {
+    background-color: #ffffff;
+    color: #555555;
+    padding: 20px;
+    margin-right: 10px;
+    border: none;
+    box-shadow: inset 5px 5px 16px #8888882e;
+    border-radius: 12px;
+
+  }
+
+  .search-label {
+    color: #555555;
+    margin-right: 10px;
+  }
+
+  .find-jobs-btn {
+    background-color: #0000ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+  }
