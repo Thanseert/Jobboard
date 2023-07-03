@@ -1,0 +1,99 @@
+<form class="job-post-form" method="post" action="/postjob">
+    <h2>Post a Job</h2>
+    <div class="form-group">
+      <!-- <label for="job-title">Job Title:</label> -->
+      <input type="text" id="job-title" placeholder="JOB TITLE" required>
+    </div>
+    <div class="form-group">
+      <!-- <label for="company">Company:</label> -->
+      <input type="text" id="company" placeholder="COMPANY NAME" required>
+    </div>
+    <div class="form-group">
+      <!-- <label for="location">Location:</label> -->
+      <input type="text" id="location" placeholder="JOB LOCATION" required>
+    </div>
+    <div class="form-group">
+      <!-- <label for="description">Job Description:</label> -->
+      <textarea id="description" placeholder="JOB DESCRIPTION" required></textarea>
+    </div>
+    <div class="form-group">
+      <!-- <label for="requirements">Job Requirements:</label> -->
+      <textarea id="requirements" placeholder="JOB REQUIREMENTS" required></textarea>
+    </div>
+    <div class="form-group">
+      <!-- <label for="salary">Salary:</label> -->
+      <input type="text" id="salary" placeholder="SALARY" required>
+    </div>
+    <button type="submit">Post Job</button>
+  </form>
+
+  <style>
+    body{
+        font-family: sans-serif;
+
+    }
+    
+     .job-post-form {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    .job-post-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+      
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      color: #000;
+      
+      border-radius: 5px;
+      background-color: #e9ecef;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder{
+        color: #495057;
+        opacity: 80%;
+        font-family: sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    .form-group textarea {
+      height: 100px;
+    }
+    
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #40c057;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #2f9e44;
+    }
+  </style>

@@ -8,6 +8,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/views'));
 
+
 app.get("/", function(req, res){
     res.render("home.ejs");
 });
@@ -15,7 +16,19 @@ app.get("/", function(req, res){
 app.get("/create", function(req, res){
     res.render("create.ejs");
 });
+app.post("/create", function(req, res){
+    res.redirect("/postjob");
+});
 
+
+// app.post("/postjob", function(req, res){
+//     res.redirect("/postjob")
+// }); 
+// create database 
+
+app.get("/postjob", function(req, res){
+    res.render("postjob.ejs");
+});
 
 
 app.get("/login", function(req, res){
