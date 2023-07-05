@@ -1,180 +1,213 @@
-.navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #000000; /* Black line at the bottom */
-    padding: 10px;
-  }
+/* home page */
 
-  /* Navbar container */
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: none;
+}
+/* /NAVIGATION BAR/ */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.app-name {
+  font-weight: bold;
+  font-size: 22px;
+  color: #1c7ed6;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  background-color: #228be6;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+/* /-------------------------------------------------------/ */
+/* Search section */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  box-shadow: 5px 5px 12px #868e968a;
+  padding-bottom: 40px;
+  border-radius: 12px;
+}
+
+.search-section img {
+  width: 600px;
+}
+
+.search-box {
+  background-color: #ffffff;
+  color: #555555;
+  padding: 20px;
+  margin-right: 10px;
+  border: none;
+  box-shadow: inset 5px 5px 16px #8888882e;
+  border-radius: 12px;
+}
+
+.search-label {
+  color: #555555;
+  margin-right: 10px;
+}
+
+.find-jobs-btn {
+  background-color: #228be6;
+  color: #ffffff;
+  padding: 18px 24px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Middle Section */
+.middle-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 40px;
+  column-gap: 40px;
+  margin: 20px 100px;
+}
+
+.middle-section img {
+  width: 100%;
+}
+
+.middle-section h2 {
+  box-sizing: border-box;
+  color: #1c7ed6;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.middle-section p {
+  color: #343a40;
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+.footer {
+  background-color: #212529;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.footer-sidebar {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-links,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #f1f3f5;
+  text-decoration: none;
+}
+
+.footer-social a {
+  font-size: 18px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  align-self: center;
+}
+
+.footer h1 {
+  color: #1c7ed6;
+  font-size: 24px;
+}
+
+/* home page */
+  
+  /* create jobs page */
+  
+  * {
+    font-family: "Inter", sans-serif;
+  }
+  /* /NAVIGATION BAR/ */
   .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #555555;
+    padding: 24px;
   }
-
-  /* Job board app name */
+  
   .app-name {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
+    color: #1c7ed6;
   }
-
-  /* Navbar links */
+  
   .nav-links {
     display: flex;
-    justify-content: flex-end;
+    gap: 20px;
   }
-
+  
   .nav-links a {
-    margin-left: 10px;
-    color: #555555;
     text-decoration: none;
-  }
-
-  /* Search section */
-  .search-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
-
-  .search-box {
-    background-color: #ffffff;
-    color: #555555;
-    padding: 20px;
-    margin-right: 10px;
-    border: none;
-    box-shadow: inset 5px 5px 16px #8888882e;
-    border-radius: 12px;
-
-  }
-
-  .search-label {
-    color: #555555;
-    margin-right: 10px;
-  }
-
-  .find-jobs-btn {
-    background-color: #0000ff;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-
-   /* Middle section */
-   .middle-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
-    margin-left: 100px;
-  }
-
-  .middle-section h2 {
-    font-size: 28px;
-  }
-
-  .middle-section p {
-    font-size: 50px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-  }
-
-  .middle-section img {
-    width: 600px;
-    height: auto;
-    border-radius: 5px;
-    margin-right: 150px;
-  }
-
-  .line {
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.2); 
-    margin-bottom: 80px;
-  }
-  
-  .bottom-section {
-    padding: 20px;
-  }
-  
-  .bottom-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .bottom-text {
-    flex-basis: 50%;
-    margin-left: 100px;
-    font-size: 28px;
-  }
-  .bottom-text h2 {
-    margin-top: 300px;
-  }
-  
-  .bottom-image {
-    flex-basis: 50%;
-    text-align: right;
-    margin-right: 150px;
-  }
-  
-  .bottom-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .footer {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 20px;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-logo img {
-    width: 100px;
-    height: auto;
-    border-radius: 15px;
-  }
-  
-  .footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  
-  .footer-social a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  
-  .footer-social i {
-    font-size: 20px;
-  }
-  
-  /* create jobs page */
-  
+    background-color: #228be6;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+   }
+  /* /-------------------------------------------------------/ */ 
   .container {
+    height: 400px;
+    margin: 20px 100px 40px 100px;
+    background-color: #fff;
+    padding: 20px;
+    background-image: linear-gradient(90deg, #343a40c2, #00000000),
+      url("https://www.bizlibrary.com/wp-content/uploads/2019/05/30141657/employeeretention.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
-    background-color: #f5f5f5;
-    padding: 20px;
+    /* background: linear-gradient(to bottom, #f5f5f5, #e0e0e0); */
   }
   
-  .container > div {
+  /* .container > div {
     flex: 1;
-  }
+  } */
   
   .container h1 {
     font-size: 24px;
-    color: #333333;
+    color: #fff;
     margin-bottom: 10px;
   }
   
@@ -184,7 +217,7 @@
   }
   
   .container button {
-    background-color: #007bff;
+    background-color: #228be6;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -194,85 +227,47 @@
   }
   
   .container button:hover {
-    background-color: #0056b3;
+    background-color: #228be6;
   }
   
   .container img {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
     max-width: 100%;
     height: auto;
   }
-
-  .image-container {
-    position: relative;
-  }
   
-  .image-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    padding: 10px;
-    font-size: 14px;
-  }
-  .container {
-    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
-  }
   .container h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    font-size: 32px;
     margin-left: 100px;
-  }
-
-  .container {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .image-container {
-    position: relative;
   }
   
-  .image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  }
-  .container button {
-    transition: background-color 0.3s, transform 0.3s;
-    margin-left: 100px;
+  .image-container {
+    position: relative;
   }
   
   .container button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-  .container {
-    font-family: Arial, sans-serif;
-    color: #333333;
-    margin: 100px;
-  }
-  
-  .container h1 {
-    font-size: 24px;
-    font-weight: bold;
+    background-color: #1c7ed6;
   }
   
   .container button {
-    background-color: #007bff;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 100px;
+    background-color: #228be6;
     color: #ffffff;
+    border-radius: 6px;
   }
-
-  .box-container{
+  
+  .box-container {
+    color: #212529;
     display: flex;
     gap: 40px;
-    margin: 0 40px;
+    margin: 0 100px;
   }
-
-  .box{
-    border: 2px solid #999 ;
-    border-radius: 12px;
+  
+  .box {
+    background: linear-gradient(0deg, #a5d8ff, #d0ebff);
     padding: 12px 20px;
     width: 400px;
   }

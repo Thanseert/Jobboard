@@ -1,0 +1,17 @@
+<!-- searchresults.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Search Results</title>
+</head>
+<body>
+  <h1>Job Search Results</h1>
+  <ul>
+    <% jobs.forEach((job) => { %>
+      <li><%= job.jobtitle %> - <%= job.company %></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
+
+
