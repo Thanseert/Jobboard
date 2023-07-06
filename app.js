@@ -36,32 +36,49 @@ const Job = mongoose.model('Job', JobSchema);
 app.get("/", function(req, res){
     res.render("home.ejs");
 });
-  
 
-app.post("/", async function(req, res){
+
+//gp 2
+app.post("/", async function(req, res) {
     const what = req.body.what;
     const where = req.body.where;
-
-
+  
     try {
-        const result = await Job.find({ jobtitle: what, location: where }).exec();
-        res.render("/searchresults.ejs", { jobs: result });
-        console.log(result);
-        // error in the rendering process
-    } catch(error) {
-        console.log(error);
+      const result = await Job.find({
+        $or: [
+          { jobtitle: { $regex: new RegExp(what, "i") } },
+          { location: { $regex: new RegExp(where, "i") } }
+        ]
+      }).exec();
+      
+      res.render("searchresults.ejs", { jobs: result });
+    } catch (error) {
+      console.log(error);
     }
-});
+  });
+  
 
 app.get("/searchresults", function(req, res) {
     res.render("searchresults.ejs");
 });
 
+app.get("/company/:id", async function(req, res){
+    try {
+        const companyId = req.params.id;
+        console.log(companyId);
+        const company = await Job.findById(companyId).exec();
+        res.render("companydetails.ejs", {company: company});
+        } catch (error) {
+          console.log(error);
+        }
+});
+      
+
 app.get("/create", function(req, res){
     res.render("create.ejs");
 });
 app.post("/create", function(req, res){
-    res.redirect("/postjob");
+    res.redirect("/postjob"); 
 });
 
 

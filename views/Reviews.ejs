@@ -1,21 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Company Review</title>
-</head>
-<body>
-    <div>
-        <h1>Find the perfect place for Work</h1>
-        <p>Access millions of company reviews</p>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-container">
+        <div class="app-name">Job Board App</div>
+        <div class="nav-links">
+          <a href="#">Find Jobs</a>
+          <a href="#">Company Reviews</a>
+          <a href="/create">Post Jobs</a>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="container text-cont">
+      <h1>Find the perfect place for Work</h1>
+      <p>Access millions of company reviews</p>
+    </div>
+    <div class="search-cont container">
+      <div>
         <form>
-            <label for="company-search">Company name</label>
-            <input type="search-box" type="text" placeholder="Search by company name">
-            <button type="submit">Find Companies</button>
+          <input
+            class="search-bar"
+            type="search-box"
+            type="text"
+            placeholder="Search by company name"
+          />
+          <button type="submit" class="search-btn">Go!</button>
         </form>
+      </div>
     </div>
-</body>
+  </body>
+
+  <style>
+    * {
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      padding: none;
+      color: #212529;
+    }
+    /* /NAVIGATION BAR/ */
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .app-name {
+      font-weight: bold;
+      font-size: 22px;
+      color: #1c7ed6;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      background-color: #228be6;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    .container {
+      width: 1200px;
+      margin: 50px auto;
+    }
+
+    .text-cont h1 {
+      font-size: 54px;
+      letter-spacing: -0.8px;
+    }
+
+    .text-cont p {
+      font-size: 24px;
+      font-weight: 500;
+      color: #495057;
+    }
+
+    .search-cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+    }
+
+    .search-bar {
+      width: 500px;
+      height: 35px;
+      border: none;
+      background-color: #d0ebff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      box-shadow: inset 5px 5px 12px #adb5bd75;
+    }
+
+    .search-bar::placeholder {
+      color: #495057da;
+    }
+
+    .search-bar:focus {
+      outline: 2px solid #343a40;
+    }
+
+    .search-btn {
+      background-color: #228be6;
+      cursor: pointer;
+      color: #fff;
+      height: 48px;
+      width: 48px;
+      font-size: 18px;
+      border: none;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+
+    .search-cont form {
+      display: flex;
+      gap: 6px;
+    }
+  </style>
 </html>

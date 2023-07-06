@@ -8,7 +8,11 @@
   <h1>Job Search Results</h1>
   <ul>
     <% jobs.forEach((job) => { %>
-      <li><%= job.jobtitle %> - <%= job.company %></li>
+      <li>
+        <a href="/company/<%= job._id %>">
+          <%= job.jobtitle %> - <%= job.company %>
+        </a>
+      </li>
     <% }) %>
   </ul>
 </body>
