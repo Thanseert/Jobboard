@@ -29,8 +29,14 @@ const JobSchema = new mongoose.Schema({
     salary: String
 });
 
+const ReviewSchema = new mongoose.Schema({
+    companyName: String,
+    Review: String
+});
+
 const Job = mongoose.model('Job', JobSchema);
 
+const Review = mongoose.model('Review', ReviewSchema);
 
 
 app.get("/", function(req, res){
@@ -126,8 +132,38 @@ app.get("/companyreviews", function(req, res){
     res.render("Reviews.ejs");
 });
 
+app.get("/apply", function(req, res){
+    res.render("Application.ejs");
+});
 
 
+app.post("/apply", function(req, res){
+    res.render("Application.ejs");
+});
+
+
+
+app.post("/applyjob", function(req, res){
+    res.redirect("/");
+});
+
+app.get("/postreview", function(req, res){
+    res.render("postreview.ejs");
+})
+
+app.post("/postreview", function(req, res){
+    res.render("postreview.ejs");
+});
+
+
+app.post("/reviews", async function(req, res){
+    const company = req.body.company;
+    const results = await Review.find({company: company});
+
+    console.log(results);
+    res.redirect("/postreview")
+    
+});
 
 
 
