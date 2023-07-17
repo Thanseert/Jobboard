@@ -152,16 +152,39 @@ app.get("/postreview", function(req, res){
 })
 
 app.post("/postreview", function(req, res){
-    res.render("postreview.ejs");
+    const companyname = req.body.companyname;
+    const review = req.body.review;
+    
+    const newReview = new Review ({
+        companyName: companyname,
+        Review: review
+  }); 
+    
+  newReview .save()
+  .then(() =>{
+      console.log("successfull!");
+      res.redirect("/");
+  })
+  .catch((error) => {
+      console.log("error", error);
+      res.redirect("/");
+  });
 });
 
+// company name is not storing in the db
+
+
+
+app.get("/reviewresult", function(req, res){
+    res.render("reviewresult.ejs");
+});
 
 app.post("/reviews", async function(req, res){
     const company = req.body.company;
     const results = await Review.find({company: company});
 
-    console.log(results);
-    res.redirect("/postreview")
+    res.render("reviewresult.ejs", {results: results});
+    // res.redirect("/reviewresult");
     
 });
 
@@ -173,4 +196,5 @@ app.post("/reviews", async function(req, res){
 app.listen(3000, function(req, res){
     console.log("Port succesfully running on port 3000");
 });
+
 
