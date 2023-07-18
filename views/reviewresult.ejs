@@ -45,6 +45,26 @@
     <ul>
       <% results.forEach((review) => { %>
         <li>
+          <div class="company"><%= review.companyName %></div>
+          <div class="review"><%= review.Review %></div>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No reviews found.</p>
+  <% } %>
+</body>
+</html>
+
+
+
+<!-- </head>
+<body>
+  <h1>Review Results</h1>
+  <% if (results.length > 0) { %>
+    <ul>
+      <% results.forEach((review) => { %>
+        <li>
           <div class="company"><%= review.company %></div>
           <div class="review"><%= review.review %></div>
         </li>
@@ -54,4 +74,4 @@
     <p>No reviews found.</p>
   <% } %>
 </body>
-</html>
+</html> -->

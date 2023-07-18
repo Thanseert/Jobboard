@@ -152,7 +152,7 @@ app.get("/postreview", function(req, res){
 })
 
 app.post("/postreview", function(req, res){
-    const companyname = req.body.companyname;
+    const companyname = req.body.companyName;
     const review = req.body.review;
     
     const newReview = new Review ({
@@ -171,23 +171,24 @@ app.post("/postreview", function(req, res){
   });
 });
 
-// company name is not storing in the db
 
 
 
-app.get("/reviewresult", function(req, res){
-    res.render("reviewresult.ejs");
-});
+
+// app.get("/reviewresult", function(req, res){
+//     res.render("reviewresult.ejs");
+// });
+
+  
 
 app.post("/reviews", async function(req, res){
     const company = req.body.company;
-    const results = await Review.find({company: company});
-
-    res.render("reviewresult.ejs", {results: results});
-    // res.redirect("/reviewresult");
-    
-});
-
+    const results = await Review.find({ companyName: company });
+  
+    res.render("reviewresult.ejs", { results: results });
+  });
+  
+// can't render the results from db
 
 
 
