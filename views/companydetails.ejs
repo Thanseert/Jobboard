@@ -1,19 +1,209 @@
-<!-- company-details.ejs -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Company Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .job-title, .company-name {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .location {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+    }
+
+    .description, .requirements, .salary {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .apply-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .apply-button button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .apply-button button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-  <h1>Company Details</h1>
-  <h2><%= company.jobtitle %></h2>
-  <h2><%= company.company %></h2>
-  <p><%= company.location %></p>
-  <p><%= company.description %></p>
-  <p><%= company.requirement %></p>
-  <p><%= company.salary %></p>
-  <form action="/apply" method="post">
-    <button type="submit">Apply Now</button>
-  </form>
+  <div class="container">
+    <h1>Company Details</h1>
+    <div class="job-title"><%= company.jobtitle %></div>
+    <div class="company-name"><%= company.company %></div>
+    <div class="location"><%= company.location %></div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p><%= company.description %></p>
+    </div>
+
+    <div class="requirements">
+      <h3>Requirements</h3>
+      <p><%= company.requirement %></p>
+    </div>
+
+    <div class="salary">
+      <h3>Salary</h3>
+      <p><%= company.salary %></p>
+    </div>
+
+    <div class="apply-button">
+      <form action="/apply" method="post">
+        <button type="submit">Apply Now</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .job-title, .company-name {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .location {
+      text-align: center;
+      color: #888;
+      font-style: italic;
+    }
+
+    .description, .requirements, .salary {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .apply-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .apply-button button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .apply-button button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Company Details</h1>
+    <div class="job-title"><%= company.jobtitle %></div>
+    <div class="company-name"><%= company.company %></div>
+    <div class="location"><%= company.location %></div>
+
+    <div class="description">
+      <h3>Description</h3>
+      <p><%= company.description %></p>
+    </div>
+
+    <div class="requirements">
+      <h3>Requirements</h3>
+      <p><%= company.requirement %></p>
+    </div>
+
+    <div class="salary">
+      <h3>Salary</h3>
+      <p><%= company.salary %></p>
+    </div>
+
+    <div class="apply-button">
+      <form action="/apply" method="post">
+        <button type="submit">Apply Now</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- <h1>Company Details</h1>
+<h2><%= company.jobtitle %></h2>
+<h2><%= company.company %></h2>
+<p><%= company.location %></p>
+<p><%= company.description %></p>
+<p><%= company.requirement %></p>
+<p><%= company.salary %></p>
+<form action="/apply" method="post">
+  <button type="submit">Apply Now</button>
+</form> -->
